@@ -1,0 +1,44 @@
+GPIO,ALT0,ALT1,PMOD,H/W pin,UP5K pin,Function,HW state,SMI state
+0,SDA0,SA5,,27,6,,,Pull up
+1,SCL0,SA4,,28,9,,,Pull up
+2,SDA1,SA3,,3,28,,,Pull up
+3,SCL1,SA2,,5,27,,,Pull up
+4,GPCLK0,SA1,,7,26,,,Pull up
+5,GPCLK1,SA0,,29,4,,,Pull up
+6,GPCLK2,SOE/SE,,31,2,,,Pull up
+7,SPI0_CE1,SWE/SRW,,26,10,,,Pull up
+8,SPI0_CE0,SD0,,24,11,,,
+9,SPI0_MISO,SD1,,21,14,MISO,,
+10,SPI0_MOSI,SD2,,19,17,MOSI,,
+11,SPI0_SCLK,SD3,,23,15,SCLK,,
+12,PWM0,SD4,,32,3,,,
+13,PWM1,SD5,,33,48,,,
+14,TXD0,SD6,,8,25,,,
+15,RXD0,SD7,,10,23,,,
+16,,SD8,,36,47,,,
+17,,SD9,,11,21,,,
+18,PCM_CLK,SD10,,12,20,,,
+19,PCM_FS,SD11,,35,46,,,
+20,PCM_DIN,SD12,,38,45,,,
+21,PCM_DOUT,SD13,,40,44,,,
+22,,SD14,,15,19,,,
+23,,SD15,,16,18,,,
+24,,SD16,,18,13,,,
+25,,SD17,,22,12,,,
+26,,,,37,7,CDONE,2.2k pull up,
+27,,,,13,8,CRESET,10K pull up,
+,,,,,,,,
+3V3,,,,"1, 17",,,,
+5V,,,,"2, 4",,,,
+GND,,,,"6, 9, 14, 20",,,,
+GND,,,,"25, 30, 34, 39",,,,
+,,,,,,,,
+,,,,,16,SPI_SS,10K pull down,
+,,,1,,42,,,
+,,,2,,37,,,
+,,,3,,35,,,
+,,,4,,32,,,
+,,,7,,43,,,
+,,,8,,38,,,
+,,,9,,36,,,
+,,,10,,34,,,
