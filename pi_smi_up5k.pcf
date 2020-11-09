@@ -1,0 +1,102 @@
+# spi pins (overlaps with gpio/smi) [pi names]
+set_io SPI_CE0 10
+set_io SPI_CE1 11
+set_io SPI_MISO 14
+set_io SPI_MOSI 17
+set_io SPI_SCLK 15
+
+# i2c pins (overlaps with gpio/smi) no HW pullups [pi names]
+set_io I2C_SDA0 6
+set_io I2C_SCL0 9
+set_io I2C_SDA1 28
+set_io I2C_SCL1 27
+
+# uart pins (overlaps with gpio/smi) [pi names]
+set_io UART_TX 25
+set_io UART_RX 23
+
+# pcm pins (overlaps with gpio/smi) [pi names]
+set_io PCM_CLK 20
+set_io PCM_FS 46
+set_io PCM_DIN 45
+set_io PCM_DOUT 44
+
+# pwm pins (overlaps with gpio/smi) [pi names]
+set_io PWM0 3
+set_io PWM1 48
+
+# gpclk pins (overlaps with gpio/smi) [pi names]
+set_io GPCLK0 26
+set_io GPCLK1 4
+set_io GPCLK2 2
+
+# blinky blinky
+set_io RGB0 39  # blue
+set_io RGB1 40  # green
+set_io RGB2 41  # red
+
+# GPI pins (takes ALL pi pins)
+set_io GPIO0 6
+set_io GPIO1 9
+set_io GPIO2 28
+set_io GPIO3 27
+set_io GPIO4 26
+set_io GPIO5 4
+set_io GPIO6 2
+set_io GPIO7 10
+set_io GPIO8 11
+set_io GPIO9 14
+set_io GPIO10 17
+set_io GPIO11 15
+set_io GPIO12 3
+set_io GPIO13 48
+set_io GPIO14 25
+set_io GPIO15 23
+set_io GPIO16 47
+set_io GPIO17 21
+set_io GPIO18 20
+set_io GPIO19 46
+set_io GPIO20 45
+set_io GPIO21 44
+set_io GPIO22 19
+set_io GPIO23 18
+set_io GPIO24 13
+set_io GPIO25 12
+
+# SMI pins (takes ALL pi pins)
+set_io SMI_SA5 6
+set_io SMI_SA4 9
+set_io SMI_SA3 28
+set_io SMI_SA2 27
+set_io SMI_SA1 26
+set_io SMI_SA0 4
+set_io SMI_SOE 2
+set_io SMI_SWE 10
+set_io SMI_SD0 11
+set_io SMI_SD1 14
+set_io SMI_SD2 17
+set_io SMI_SD3 15
+set_io SMI_SD4 3
+set_io SMI_SD5 48
+set_io SMI_SD6 25
+set_io SMI_SD7 23
+set_io SMI_SD8 47
+set_io SMI_SD9 21
+set_io SMI_SD10 20
+set_io SMI_SD11 46
+set_io SMI_SD12 45
+set_io SMI_SD13 44
+set_io SMI_SD14 19
+set_io SMI_SD15 18
+set_io SMI_SD16 13
+set_io SMI_SD17 12
+
+# pmod pins (no overlap with smi/pi)
+set_io PMOD1 42
+set_io PMOD2 37
+set_io PMOD3 35
+set_io PMOD4 32
+set_io PMOD7 43
+set_io PMOD8 38
+set_io PMOD9 36
+set_io PMOD10 34
