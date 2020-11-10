@@ -21,29 +21,30 @@ module top (
 
 	// register to store spi value
 	reg [7:0] r0 = 0;
-	reg [8:0] w0 = 0;
+	reg [7:0] w0 = 0;
 
-	reg [2:0] sclk_buf = 0;
+	reg [1:0] sclk_buf = 0;
 	always @(posedge clk) begin
 		// buffer SPI clock
-		sclk_buf = {sclk_buf[1:0], SPI_SCLK};
+		sclk_buf = {sclk_buf[0], SPI_SCLK};
 	end
 
 	reg [3:0] bit_count = 0;
 	always @(posedge clk) begin
 		// if buffered SPI clock has rising edge, clock in MOSI
-		if (sclk_buf[2:1] == 2'b01) begin
+		if (sclk_buf[1:0] == 2'b01) begin
 			r0 = {r0[6:0], SPI_MOSI};
 			bit_count <= bit_count + 1;
 		end
-		if (sclk_buf[2:1] == 2'b10) begin
-			w0 <= {w0[7:0], 1'b0};
-		end
-		if (bit_count[3]) begin
-			bit_count <= 0;
-			w0[7:0] <= r0;
+		if (sclk_buf[1:0] == 2'b10) begin
+			if (bit_count[3]) begin
+				bit_count <= 0;
+				w0 <= r0;
+			end else begin
+				w0 <= {w0[6:0], 1'b0};
+			end
 		end
 	end
 
-	assign SPI_MISO = w0[8];
+	assign SPI_MISO = w0[7];
 endmodule
