@@ -64,8 +64,10 @@ module top (
 		SMI_SD11, SMI_SD10, SMI_SD9, SMI_SD8,
 		SMI_SD7, SMI_SD6, SMI_SD5, SMI_SD4,
 		SMI_SD3, SMI_SD2, SMI_SD1, SMI_SD0
-	} = o_data;
+	} = ce ? o_data : 16'bz;
+	assign o_data = counter;
 
+	/*
 	always @(negedge SMI_SOE) begin
 		if (ce) begin
 			o_data <= counter;
@@ -73,4 +75,5 @@ module top (
 			o_data <= 16'b0;
 		end
 	end
+	*/
 endmodule
