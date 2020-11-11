@@ -52,7 +52,8 @@ sudo modprobe bcm2835_smi_dev
 
 With default settings:
 SA5:SA0: normally high (0=low) MSB-LSB, asserts ~8 ns before SOE/SWE falling edge, deasserts 8 ns after SOE/SWE rising
-SOE/SE: normally high, goes low on read (data OK on falling edge?)SWE/SRW: normally high, goes low on write (data OK on falling edge), low pulse duration is 24ns
+SOE/SE: normally high, goes low on read (data OK on falling edge?)
+SWE/SRW: normally high, goes low on write (data OK on falling edge), low pulse duration is 24ns
 SD15:SD0: ? 0=low 1=high MSB-LSB (when writing to /dev/smi order is LSByte then MSByte)
 
 ~16 ns between sequential writes, so bus is default 25 MHz giving throughput of 50 MBs (25 MBs if 8 bit)
